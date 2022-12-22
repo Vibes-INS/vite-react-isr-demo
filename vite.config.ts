@@ -8,7 +8,10 @@ export default defineConfig({
   plugins: [
     react(),
     ssr({
-      prerender: false,
+      prerender: {
+        noExtraDir: false,
+        // partial: true,
+      },
     }),
     vercel(),
     vercelSsr(),
