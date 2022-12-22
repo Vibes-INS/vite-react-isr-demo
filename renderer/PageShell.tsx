@@ -14,7 +14,10 @@ export function PageShell({ children, pageContext }: { children: ReactNode; page
               CSR
             </Link>
             <Link className="navitem" href="/about">
-              SSR(wait a second)
+              ISR
+            </Link>
+            <Link className="navitem" href="/isr">
+              ISR2
             </Link>
           </Sidebar>
           <Content>{children}</Content>
