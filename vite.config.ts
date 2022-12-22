@@ -13,7 +13,7 @@ export default defineConfig({
       },
     }),
     vercel(),
-    // vercelSsr(),
+    vercelSsr(),
   ],
   vercel: {
     expiration: 25,
