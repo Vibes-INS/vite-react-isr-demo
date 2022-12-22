@@ -12,10 +12,9 @@ export default defineConfig({
     vercelSsr(),
   ],
   vercel: {
-    // prerender: false,
-    // isr: {
-    //   '/about': { expiration: 15 },
-    // },
+    isr: {
+      '/about': { expiration: 15 },
+    },
   },
   server: {
     port: 3000,
