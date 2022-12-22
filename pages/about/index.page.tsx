@@ -1,9 +1,15 @@
 import './code.css'
 
+export const isr = { expiration: 15 };
+export const clientRouting = true
+
 export function Page(props: { d: string, fact: string }) {
   return (
     <>
       <h1>About</h1>
+      <p>
+        ISR: regenerated after {isr.expiration} seconds
+      </p>
       <p>
         Demo using <code>vite-plugin-ssr</code>.
         {props.d}
@@ -15,5 +21,3 @@ export function Page(props: { d: string, fact: string }) {
   )
 }
 
-export const isr = { expiration: 15 };
-export const clientRouting = true
