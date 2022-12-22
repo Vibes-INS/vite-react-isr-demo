@@ -1,8 +1,12 @@
 import './code.css'
+import {useFakeAuthContext} from "../../renderer/useFakeAuthContext";
 
 export const isr = { expiration: 15 };
 
 export function Page(props: { d: string, fact: string }) {
+  const context = useFakeAuthContext()
+  console.log('isr current JWT: ', context?.jwt)
+
   return (
     <>
       <h1>About</h1>
