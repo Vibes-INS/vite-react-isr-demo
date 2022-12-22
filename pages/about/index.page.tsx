@@ -1,7 +1,6 @@
 import './code.css'
 
 export const isr = { expiration: 15 };
-export const clientRouting = true
 
 export function Page(props: { d: string, fact: string }) {
   return (

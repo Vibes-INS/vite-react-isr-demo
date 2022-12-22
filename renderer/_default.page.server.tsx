@@ -10,11 +10,11 @@ export const passToClient = ['pageProps', 'urlPathname']
 export async function render(pageContext: PageContextServer) {
   const { Page, pageProps } = pageContext
   const pageHtml = renderToString(
-    <FakeAuthContextProvider>
+    // <FakeAuthContextProvider>
       <PageShell pageContext={pageContext}>
         <Page {...pageProps} />
       </PageShell>
-    </FakeAuthContextProvider>
+    // </FakeAuthContextProvider>
   )
 
   // See https://vite-plugin-ssr.com/head
