@@ -9,7 +9,7 @@ export default defineConfig({
     react(),
     ssr(),
     vercel(),
-    // vercelSsr(),
+    vercelSsr(),
   ],
   vercel: {
     // prerender: false,
