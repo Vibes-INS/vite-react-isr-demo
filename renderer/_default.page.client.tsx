@@ -8,11 +8,11 @@ const root = createRoot(document.getElementById('page-view')!)
 export async function render(pageContext: PageContextClient) {
   const { Page, pageProps } = pageContext
   root.render(
-    // <FakeAuthContextProvider>
+    <FakeAuthContextProvider>
       <PageShell pageContext={pageContext}>
         <Page {...pageProps} />
       </PageShell>
-    // </FakeAuthContextProvider>
+    </FakeAuthContextProvider>
   )
 
 }
