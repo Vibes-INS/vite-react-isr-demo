@@ -7,19 +7,15 @@ import vercelSsr from '@magne4000/vite-plugin-vercel-ssr';
 export default defineConfig({
   plugins: [
     react(),
-    ssr({
-      prerender: {
-        noExtraDir: true,
-      },
-    }),
+    ssr(),
     vercel(),
-    vercelSsr(),
+    // vercelSsr(),
   ],
   vercel: {
     expiration: 25,
-    // isr: {
-    //   '/about': { expiration: 15, symlink: 'isr_', route: '^/about$' },
-    // },
+    isr: {
+      '/about': { expiration: 15 },
+    },
   },
   server: {
     port: 3000,
