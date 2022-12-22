@@ -8,18 +8,16 @@ export default defineConfig({
   plugins: [
     react(),
     ssr({
-      prerender: {
-        noExtraDir: true
-      },
+      prerender: false,
     }),
     vercel(),
     vercelSsr(),
   ],
   vercel: {
     expiration: 25,
-    // isr: {
-    //   '/about': { expiration: 15 },
-    // },
+    isr: {
+      '/about': { expiration: 15 },
+    },
   },
   server: {
     port: 3000,
